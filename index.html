@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Apple
+    </title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <header id="mainHeader">
+        <nav id="mainNav" class="screen">
+        <ul id="menuListItems">
+            <li class="menuItems"><a href="#"><span id="appleLogo">Apple Logo</span></a></li>
+            <li class="menuItems"><a href="#">Mac</a></li>
+            <li class="menuItems"><a href="#">iPad</a></li>
+            <li class="menuItems"><a href="#">iPhone</a></li>
+            <li class="menuItems"><a href="#">Watch</a></li>
+            <li class="menuItems"><a href="#">TV</a></li>
+            <li class="menuItems"><a href="#">Music</a></li>
+            <li class="menuItems"><a href="#">Support</a></li>
+            <li class="menuItems"><a href="#"><span id="search">Search</span></a></li>
+            <li class="menuItems"><a href="#"><span id="bag">Bag</span></a></li>
+            </ul>
+        </nav>
+        </header>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="img1.jpg">
+        <!-- <div class="text text-color"><b>iPhone</b><br>This is 7.</div> -->
+      </div>
+      <div class="mySlides fade">
+        <img src="img2.jpeg">
+        <!-- <div class="text"><b>Watch</b><br>SERIES 2</div> -->
+      </div>
+      <div id="mackbook" class="mySlides fade">
+          <img src="img3.png">
+        <!-- <div class="text"><b>MacBook Pro</b><br>A touch of genius</div> -->
+      </div>
+    </div>
+    <br>
+    <div class="line-box">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <script>
+          var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var line = document.getElementsByClassName("line");
+          for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex> slides.length) {slideIndex = 1}    
+          for (i = 0; i < line.length; i++) {
+              line[i].className = line[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          line[slideIndex-1].className += " active";
+          setTimeout(showSlides, 3000); 
+      }
+    </script>
+    <div class="grid">
+      <div class="row row-img-first"></div>
+      <div class="row row-img-second"></div>
+      <div class="row row-img-third"></div>
+      <div class="row row-img-fourth"></div>
+    </div>
+  </body>
+</html>
